@@ -82,8 +82,9 @@ h6 {
 
 html,
 body {
-  background-color: #333;
+  background-color: #2e2e2e;
   color: #fff;
+  font-family: "Raleway", Arial, "san-serif";
 }
 /* Блокируем прокрутку страницы при открытом меню */
 body._lock {
@@ -145,7 +146,7 @@ body._lock {
   left: 0;
   width: 100%;
   z-index: 10;
-  background-color: #912105;
+  background-color: #ff5d4c;
 }
 .header__container {
   max-width: 1200px;
@@ -161,6 +162,7 @@ body._lock {
   z-index: 5;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 #logo {
   width: 55px;
@@ -181,6 +183,8 @@ body._lock {
 .menu__link {
   color: #fff;
   font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
 }
 .menu__link:hover {
   text-decoration: underline;
@@ -196,17 +200,7 @@ body._touch .menu__list > li {
 body._touch .menu__link {
   flex: 1 1 auto;
 }
-.footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  background-color: rgb(37, 37, 37);
-}
-.footer__copyright {
-  text-align: center;
-}
+
 /* --------- От 767px ---------- */
 
 @media (min-width: 767px) {
@@ -234,8 +228,14 @@ body._touch .menu__link {
     width: 760px;
   }
 }
-
 @media (max-width: 767px) {
+  hr {
+    display: block;
+    border-style: inset;
+    border-width: 1px;
+    width: 100%;
+    color: #fff;
+  }
   .menu__footer > .menu__list {
     display: flex;
     flex-direction: column;
@@ -300,19 +300,33 @@ body._touch .menu__link {
     transition: left 0.3s ease 0s;
     overflow: auto;
   }
+  .menu__body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: -100%;
+    height: 50px;
+    background-color: #ff5d4c;
+    z-index: 2;
+    transition: left 0.3s ease 0s;
+  }
   .menu__body._active {
     left: 0;
   }
-  body._lock .menu__body::before {
+  .menu__body._active::before {
+    left: 0;
+  }
+  /* body._lock .menu__body::before {
     content: "";
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     height: 50px;
-    background-color: #912105;
-    z-index: 2;
-  }
+    background-color: #ff5d4c;
+    z-index: 2; 
+  } */
 
   .menu__list > li {
     flex-wrap: wrap;
@@ -406,22 +420,22 @@ body._touch .menu__link {
   /* min-width: 50vw; */
   margin: 0px auto;
   color: #000;
-  padding: 30px 0;
+  padding: 7px 0;
 }
 
 /* Поля и заголовки формы */
 .form__title {
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 700;
-  margin: 10px 0px 20px 0px;
+  margin: 5px 0px 10px 0px;
   text-align: center;
 }
 .form__sub-title {
   text-align: center;
-  margin: 0px 0px 20px 0px;
+  margin: 0px 0px 10px 0px;
 }
 .form__item {
-  margin: 0px 0px 20px 0px;
+  margin: 0px 0px 10px 0px;
 }
 .form__label {
   font-size: 18px;
@@ -430,7 +444,7 @@ body._touch .menu__link {
 }
 .form__input {
   height: 50px;
-  padding: 0px 20px;
+  padding: 0px 10px;
   border-radius: 5px;
   width: 100%;
   font-size: 18px;
@@ -439,9 +453,9 @@ body._touch .menu__link {
 
 /* Стилизация textarea */
 textarea.form__input {
-  min-height: 120px;
+  min-height: 90px;
   resize: vertical;
-  padding: 20px;
+  padding: 10px;
 }
 
 /* Кнопка Отправить */
@@ -480,4 +494,74 @@ textarea.form__input {
   font-weight: 700;
   text-align: center;
   margin: 20px 0px 0px 0px;
+}
+
+/* Подвал */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  background-color: rgb(37, 37, 37);
+}
+.footer__copyright {
+  text-align: center;
+  font-size: 1.2rem;
+}
+.footer__info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.footer__compani {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.footer__logo {
+  width: 200px;
+}
+/* Контакты */
+.contacts__item {
+  display: flex;
+  gap: 4px;
+}
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.footer__social {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__social img {
+  width: 40px;
+  height: 40px;
+  transition: all 0.3s ease 0s;
+}
+.footer__social img:hover {
+  width: 36px;
+  height: 36px;
+}
+.footer__tel {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+.footer__tel a {
+  color: #fff;
+}
+.footer__tel a:hover {
+  text-decoration: underline;
 }
