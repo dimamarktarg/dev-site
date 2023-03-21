@@ -180,20 +180,57 @@ async function handleSubmit(event) {
 form.addEventListener("submit", handleSubmit);
 
 // ===================================================================
+// "Створюємо ефективні сайти для Вашого бізнесу",
+//   "1. Проведемо аналіз конкурентів у Вашій ніші",
+//   "2. Зробимо сайт краще ніж у конкурентів",
+//   "3. Адаптуємо під телефони, планшети та ПК",
+//   "4. Оптимізуємо для пошукових систем",
+//   "5. Допоможемо з вибором сервера i домену",
 
-// // Get the video
-// var video = document.getElementById("myVideo");
+// Посимвольная печать текста
+const sentences = [
+  "Создаем эффективные сайты для вашего бизнеса",
+  "1. Проанализируем конкурентов в вашей нише",
+  "2. Сделаем сайт лучше, чем у конкурентов",
+  "3. Адаптируем под телефоны, планшеты и ПК",
+  "4. Оптимизируем изображения для быстрой загрузки",
+  "5. Оптимизируем текста для поисковых систем",
+  "6. Поможем с выбором сервера и домена",
+];
 
-// // Get the button
-// var btn = document.getElementById("myBtn");
+const text = document.getElementById("text");
+let sentenceIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+const printDelay = 100; // delay in milliseconds per character
+const eraseDelay = 50; // delay in milliseconds per character
 
-// // Pause and play the video, and change the button text
-// function myFunction() {
-//   if (video.paused) {
-//     video.play();
-//     btn.innerHTML = "Pause";
-//   } else {
-//     video.pause();
-//     btn.innerHTML = "Play";
-//   }
-// }
+function type() {
+  const currentSentence = sentences[sentenceIndex];
+  const char = currentSentence.charAt(charIndex);
+  if (!isDeleting) {
+    text.innerHTML += char;
+    charIndex++;
+    if (charIndex === currentSentence.length) {
+      isDeleting = true;
+      setTimeout(type, 1500);
+    } else {
+      setTimeout(type, printDelay);
+    }
+  } else {
+    text.innerHTML = currentSentence.substring(0, charIndex - 1);
+    charIndex--;
+    if (charIndex === 0) {
+      isDeleting = false;
+      sentenceIndex++;
+      if (sentenceIndex === sentences.length) {
+        sentenceIndex = 0;
+      }
+      setTimeout(type, printDelay);
+    } else {
+      setTimeout(type, eraseDelay);
+    }
+  }
+}
+
+type();

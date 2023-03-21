@@ -567,7 +567,15 @@ textarea.form__input {
 }
 
 /* Главный экран */
-
+#text {
+  /* text-align: left; */
+  font-size: 51px;
+  line-height: 66px;
+  height: 66px;
+  padding: 10px 20px 0px 20px;
+  color: #fff;
+  font-weight: 500;
+}
 .under-header .main-heading span {
   font-size: 70px;
   font-weight: 500;
@@ -576,9 +584,9 @@ textarea.form__input {
 }
 .subtitle h1 {
   font-weight: 500;
-  font-size: 20px;
-  line-height: 25px;
-  margin: 20px 0px 0px 0px;
+  font-size: 30px;
+  line-height: 36px;
+  margin: 20px 0px 20px 0px;
 }
 .text-center {
   text-align: center;
@@ -607,19 +615,29 @@ textarea.form__input {
     font-size: 51px;
     line-height: 66px;
   }
+  #text {
+    font-size: 51px;
+    line-height: 66px;
+    height: 66px;
+  }
   .subtitle h1 {
-    font-size: 18px;
-    line-height: 20px;
+    font-size: 30px;
+    line-height: 36px;
   }
 }
 @media (max-width: 767px) {
   .under-header .main-heading span {
-    font-size: 40px;
+    font-size: 36px;
     line-height: 39px;
   }
+  #text {
+    font-size: 36px;
+    line-height: 39px;
+    height: 39px;
+  }
   .subtitle h1 {
-    font-size: 18px;
-    line-height: 20px;
+    font-size: 24px;
+    line-height: 28px;
     font-weight: 400;
   }
 }
@@ -628,46 +646,17 @@ textarea.form__input {
     font-size: 26px;
     line-height: 34px;
   }
+  #text {
+    font-size: 26px;
+    line-height: 34px;
+    height: 34px;
+  }
   .subtitle h1 {
-    font-size: 16px;
-    line-height: 18px;
+    font-size: 20px;
+    line-height: 24px;
     font-weight: 400;
   }
 }
-/* Style the video: 100% width and height to cover the entire window */
-/* #myVideo {
-  position: relative;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-} */
-
-/* Add some content at the bottom of the video/page */
-/* .content {
-  position: relative;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: #f1f1f1;
-  width: 100%;
-  padding: 20px;
-} */
-
-/* Style the button used to pause/play the video */
-/* #myBtn {
-  width: 200px;
-  font-size: 18px;
-  padding: 10px;
-  border: none;
-  background: #000;
-  color: #fff;
-  cursor: pointer;
-}
-
-#myBtn:hover {
-  background: #ddd;
-  color: black;
-} */
 
 .video-bg {
   height: 100vh;
