@@ -82,8 +82,8 @@ h6 {
 
 html,
 body {
-  background-color: #2e2e2e;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   font-family: "Raleway", Arial, "san-serif";
 }
 /* Блокируем прокрутку страницы при открытом меню */
@@ -93,6 +93,8 @@ body._lock {
 
 .wrapper {
   min-height: 100%;
+  max-width: 1200px;
+  margin: 0px auto;
 }
 
 .page {
@@ -101,8 +103,6 @@ body._lock {
 .page__section,
 .footer {
   padding: 60px 30px 30px 30px;
-  max-width: 1200px;
-  margin: 0px auto;
 }
 .page__section_1 {
   background-color: #794f45;
@@ -149,7 +149,6 @@ body._lock {
   background-color: #3b5998;
 }
 .header__container {
-  max-width: 1200px;
   margin: 0px auto;
   display: flex;
   padding: 0px 20px;
@@ -317,17 +316,6 @@ body._touch .menu__link {
   .menu__body._active::before {
     left: 0;
   }
-  /* body._lock .menu__body::before {
-    content: "";
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    height: 50px;
-    background-color: #ff5d4c;
-    z-index: 2; 
-  } */
-
   .menu__list > li {
     flex-wrap: wrap;
     margin: 0px 0px 30px 0px;
@@ -372,7 +360,7 @@ body._touch .menu__link {
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 90vw;
-  background-color: rgb(150, 150, 150);
+  background-color: rgba(59, 89, 152, 0.8);
   padding: 0.5rem 1rem;
   box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.3);
   z-index: 1000;
@@ -396,15 +384,17 @@ body._touch .menu__link {
 .modal__header {
   font-size: 1.5rem;
   line-height: 1.2;
+  padding: 20px 5px 20px 5px;
+  color: #fff;
 }
 
 .btn--close-modal-window {
   font-family: inherit;
-  color: inherit;
+  color: #fff;
   position: absolute;
-  top: 0.1rem;
-  right: 0.3rem;
-  font-size: 2rem;
+  top: 0rem;
+  right: 0.4rem;
+  font-size: 2.5rem;
   cursor: pointer;
   border: none;
   background: none;
@@ -417,7 +407,6 @@ body._touch .menu__link {
 
 /* Стилизация формы */
 .form {
-  /* min-width: 50vw; */
   margin: 0px auto;
   color: #000;
   padding: 7px 0;
@@ -460,26 +449,25 @@ textarea.form__input {
 
 /* Кнопка Отправить */
 #my-form-button {
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 80%;
+  margin: 0 auto;
   min-height: 40px;
-  background-color: #3b5998;
   color: #fff;
   font-size: 18px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-weight: 700;
+  font-weight: 500;
   cursor: pointer;
   border-radius: 20px;
   box-shadow: 2px 5px 5px #161b13;
-  transition: all 0.3s ease 0s;
-  position: relative;
-  top: 0;
+  transition: background-color 0.3s ease 0s;
+  background-color: rgb(209, 37, 37);
 }
 #my-form-button:hover {
-  background-color: #4771ce;
+  background-color: rgb(214, 47, 47);
 }
 #my-form-button:active {
   top: 3px;
@@ -487,11 +475,11 @@ textarea.form__input {
 }
 
 #my-form-status {
-  color: #000;
+  color: #fff;
   font-size: 18px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-weight: 700;
+  font-weight: 500;
   text-align: center;
   margin: 20px 0px 0px 0px;
 }
@@ -505,6 +493,7 @@ textarea.form__input {
   align-items: center;
   gap: 16px;
   background-color: rgb(37, 37, 37);
+  color: #fff;
 }
 .footer__copyright {
   text-align: center;
@@ -567,10 +556,35 @@ textarea.form__input {
 }
 
 /* Главный экран */
+.under-header {
+  height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  padding: 60px 20px 1px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.under-header h1 {
+  font-size: 30px;
+  line-height: 36px;
+  padding: 20px 0 20px 0;
+}
+.bg-container {
+  max-width: 767px;
+  margin: 0 auto;
+}
+.under-header img {
+  width: auto;
+  max-width: 100%;
+  display: block;
+}
+.text-center {
+  text-align: center;
+}
 #cursor {
   animation: blink 0.6s infinite;
-  font-weight: 500;
-  font-size: inherit;
 }
 
 @keyframes blink {
@@ -584,126 +598,43 @@ textarea.form__input {
     opacity: 0;
   }
 }
-#text {
-  /* text-align: left; */
-  font-size: 51px;
-  line-height: 66px;
-  height: 66px;
-  color: #fff;
+#text,
+#cursor {
+  font-size: 40px;
+  line-height: 45px;
+  height: 45px;
   font-weight: 500;
-}
-.under-header .main-heading span {
-  font-size: 70px;
-  font-weight: 500;
-  line-height: 78px;
-  color: #fff;
-}
-.subtitle h1 {
-  font-weight: 500;
-  font-size: 30px;
-  line-height: 36px;
-  margin: 20px 0px 20px 0px;
-}
-.text-center {
-  text-align: center;
-}
-
-.under-header {
-  padding-top: 0;
-  overflow: hidden;
-  position: relative;
-  /* background: url("../img/bg/digital-wave-bg.jpg"); */
-  background-position: bottom;
-  background-size: 100%;
-  /* background-color: #000; */
-  background-repeat: no-repeat;
-  height: 110vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.main-heading {
-  padding: 0px 20px 0px 20px;
 }
 
 @media (max-width: 1200px) {
-  .under-header .main-heading span {
-    font-size: 51px;
-    line-height: 66px;
-  }
-  #text {
+  #text,
+  #cursor {
     font-size: 51px;
     line-height: 66px;
     height: 66px;
   }
-  .subtitle h1 {
+  .under-header h1 {
     font-size: 30px;
     line-height: 36px;
   }
 }
 @media (max-width: 767px) {
-  .under-header .main-heading span {
-    font-size: 36px;
-    line-height: 39px;
-  }
-  #text {
+  #text,
+  #cursor {
     font-size: 36px;
     line-height: 39px;
     height: 39px;
   }
-  .subtitle h1 {
+  .under-header h1 {
     font-size: 24px;
     line-height: 28px;
     font-weight: 400;
   }
 }
 @media (max-width: 450px) {
-  .under-header .main-heading span {
+  .under-header h1 {
     font-size: 26px;
-    line-height: 34px;
-  }
-  #text {
-    font-size: 26px;
-    line-height: 34px;
-    height: 34px;
-  }
-  .subtitle h1 {
-    font-size: 20px;
-    line-height: 24px;
+    line-height: 30px;
     font-weight: 400;
   }
-}
-
-.video-bg {
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-.video-bg video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-}
-.effects {
-  position: absolute;
-  object-fit: cover;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.6);
-}
-.video-bg__content {
-  z-index: 2;
-  color: #ffffff;
-  font-size: 50px;
 }

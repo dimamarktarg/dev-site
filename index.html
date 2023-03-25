@@ -96,27 +96,13 @@
         </div>
       </header>
       <main class="page">
-        <div class="video-bg">
-          <video
-            src="./img/bg/newwave.mp4"
-            type="video/mp4"
-            autoplay
-            muted
-            loop></video>
-          <div class="effects"></div>
-          <div class="video-bg__content">
-            <div class="under-header">
-              <div class="text-center main-heading">
-                <!-- <span
-                  >Створюємо ефективні сайти <br />
-                  для Вашого бізнесу</span
-                > -->
-                <div class="subtitle">
-                  <h1>Веб студия my-site.ua</h1>
-                </div>
-                <div><span id="text"></span><span id="cursor">|</span></div>
-              </div>
-            </div>
+        <div class="under-header">
+          <h1 class="text-center">Веб студия my-site.ua</h1>
+          <div><span id="text"></span><span id="cursor">|</span></div>
+          <div class="bg-container">
+            <img
+              src="/img/bg/Responsive-Web-Desig.jpg"
+              alt="Responsive-Web-Desig" />
           </div>
         </div>
 
@@ -418,6 +404,9 @@
         <nav class="menu__footer">
           <ul class="menu__list">
             <li>
+              <a href="#" class="menu__link">На верх</a>
+            </li>
+            <li>
               <a data-goto=".page__section_1" href="#" class="menu__link"
                 >Главная</a
               >
@@ -475,18 +464,18 @@
             method="POST"
             class="form__body">
             <div class="form__item">
-              <label for="formName" class="form__label">Имя*:</label>
+              <!-- <label for="formName" class="form__label">Имя*:</label> -->
               <input
                 id="formName"
                 type="text"
                 name="name"
-                placeholder="Введите ваше имя"
+                placeholder="*Введите ваше имя"
                 class="form__input"
                 required
                 autocomplete="name" />
             </div>
             <div class="form__item">
-              <label for="phone" class="form__label">Телефон*:</label>
+              <!-- <label for="phone" class="form__label">Телефон*:</label> -->
               <input
                 type="tel"
                 id="phone"
@@ -495,12 +484,12 @@
                 required
                 class="form__input"
                 autocomplete="tel"
-                placeholder="Телефон" />
+                placeholder="*Телефон для связи" />
             </div>
             <div class="form__item">
-              <label for="formMessage" class="form__label">Сообщение:</label>
+              <!-- <label for="formMessage" class="form__label">Сообщение:</label> -->
               <textarea
-                placeholder="Опишите вашу проблему"
+                placeholder="Какой тип сайта вас интерисует?"
                 name="message"
                 id="formMessage"
                 class="form__input"></textarea>
