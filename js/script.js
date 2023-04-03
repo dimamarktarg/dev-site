@@ -120,12 +120,12 @@ const btnsOpenModalWindow = document.querySelectorAll(
 
 const openModalWindow = function (e) {
   e.preventDefault();
-  modalWindow.classList.remove("hidden");
+  modalWindow.classList.remove("scale");
   overlay.classList.remove("hidden");
 };
 
 const closeModalWindow = function () {
-  modalWindow.classList.add("hidden");
+  modalWindow.classList.add("scale");
   overlay.classList.add("hidden");
 };
 
@@ -192,15 +192,15 @@ const sentences = [
   "Хотите привлечь новых клиентов и развивать свой бизнес в интернете?",
   "Поможем сделать эффективный сайт для вашего бизнеса",
   "Адаптируем под телефоны, планшеты и ПК",
-  "«Если вашего бизнеса нет в интернете, значит, вас нет в бизнесе». Билл Гейтс",
+  "Оптимизируем для поисковых систем",
 ];
 
 const text = document.getElementById("text");
 let sentenceIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
-const printDelay = 100; // delay in milliseconds per character
-const eraseDelay = 50; // delay in milliseconds per character
+const printDelay = 80; // delay in milliseconds per character
+const eraseDelay = 40; // delay in milliseconds per character
 
 function type() {
   const currentSentence = sentences[sentenceIndex];

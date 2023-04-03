@@ -103,7 +103,6 @@ body._lock {
 
 .wrapper {
   min-height: 100%;
-  max-width: 1200px;
   margin: 0px auto;
 }
 
@@ -172,7 +171,10 @@ body._lock {
 .page {
   padding: 0px 0px 0px 0px;
 }
-.page__section,
+.page__section {
+  padding: 49px 0px 30px 0px;
+}
+
 .footer {
   padding: 30px 30px 30px 30px;
 }
@@ -180,35 +182,38 @@ body._lock {
   /* background-color: #794f45; */
 }
 .page__section_2 {
-  padding: 60px 20px 40px 20px;
+  /* padding: 60px 20px 40px 20px; */
 }
 .page__section_3 {
-  background-color: #7a956b;
+  /* background-color: #7a956b; */
 }
 .page__section_4 {
-  background-color: #77608d;
+  /* background-color: #77608d; */
 }
 .page__section_5 {
-  background-color: #a3cf2a;
+  /* background-color: #a3cf2a; */
 }
 .yellow__title {
   background-color: var(--yellow);
+}
+.blue__title {
+  background-color: var(--blue);
+  color: #fff;
 }
 .page__title {
   font-size: calc(24px + 16 * ((100vw - 320px) / (1280 - 320)));
   font-weight: 500;
   margin: 0px 0px 20px 0px;
+  padding: 10px 0px 10px 0px;
 }
 .page__text {
   font-size: calc(18px + 6 * ((100vw - 320px) / (1280 - 320)));
   line-height: 150%;
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 10px 20px 10px 20px;
 }
 .page__text p {
-  margin: 0px 0px 20px 0px;
-}
-.page__sub-title {
-  font-size: calc(24px + 16 * ((100vw - 320px) / (1280 - 320)));
-  font-weight: 700;
   margin: 0px 0px 20px 0px;
 }
 
@@ -428,13 +433,13 @@ body._touch .menu__link {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: scale(1) translate(-50%, -50%);
   max-width: 90vw;
   background-color: rgba(59, 89, 152, 0.8);
   padding: 0.5rem 1rem;
   box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.3);
   z-index: 1000;
-  transition: all 0.8s;
+  transition: transform 0.6s ease 0s;
   color: #000;
   border-radius: 10px;
 }
@@ -448,7 +453,7 @@ body._touch .menu__link {
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(4px);
   z-index: 100;
-  transition: all 0.3s;
+  transition: all 0.3s ease 0s;
 }
 
 .modal__header {
@@ -470,10 +475,14 @@ body._touch .menu__link {
   border: none;
   background: none;
 }
-
-.hidden {
+.scale {
   transform: scale(0);
-  transition: transform 0.8s ease 0s;
+  transition: transform 0.6s ease 0s;
+}
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease 0s;
 }
 
 /* Стилизация формы */
@@ -561,6 +570,8 @@ textarea.form__input {
   gap: 16px;
   background-color: rgb(37, 37, 37);
   color: #fff;
+  max-width: 1200px;
+  margin: 0px auto;
 }
 .footer__copyright {
   text-align: center;
@@ -622,6 +633,7 @@ textarea.form__input {
 /* Главный экран */
 .under-header {
   height: 100vh;
+  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   padding: 44px 20px 1px 20px;
@@ -767,6 +779,38 @@ textarea.form__input {
   width: 100%;
 }
 
+/* Цитаты */
+
+.cite {
+  border-left: 5px solid var(--blue);
+  background-color: #e2e2e2;
+  border-radius: 6px;
+  padding: 10px 0px 1px 0px;
+  margin: 0px 0px 20px 0px;
+}
+.cite__text {
+  font-size: calc(22px + 8 * ((100vw - 320px) / (1200 - 320)));
+  line-height: 1.5;
+  font-weight: 600;
+  color: #303030;
+  padding: 10px 10px 10px 10px;
+}
+.cite__img {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 10px 10px 20px 0px;
+}
+.cite__img img {
+  border-radius: 50%;
+  width: 80px;
+}
+.cite__img-text {
+  padding: 0px 20px 0px 30px;
+  font-weight: 600;
+  color: var(--blue);
+}
+
 @media (max-width: 1200px) {
 }
 @media screen and (max-width: 960px) {
@@ -775,8 +819,17 @@ textarea.form__input {
   }
 }
 @media (max-width: 767px) {
+  .cite__img img {
+    width: 60px;
+  }
+  .cite {
+    border-left: 4px solid var(--blue);
+  }
 }
 @media (max-width: 450px) {
+  .cite__img img {
+    width: 50px;
+  }
   .adaptive__items {
     flex-direction: column;
   }
