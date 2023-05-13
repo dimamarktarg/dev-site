@@ -129,7 +129,7 @@ body._lock {
   color: #000;
   text-transform: uppercase;
   font-weight: 500;
-  font-size: calc(16px + 4 * ((100vw - 320px) / (1200 - 320)));
+  font-size: calc(16px + 2 * ((100vw - 320px) / (1200 - 320)));
   position: relative;
   z-index: 1;
 }
@@ -214,15 +214,13 @@ body._lock {
   margin: 0px 0px 0px 0px;
   padding: 10px 0px 10px 0px;
 }
-.page__text {
+.page__wrapper-1200 {
   font-size: calc(16px + 6 * ((100vw - 320px) / (1280 - 320)));
   line-height: 150%;
   max-width: 1200px;
   margin: 0px auto;
-  padding: 0px 20px 0px 20px;
-}
-.page__text p {
-  margin: 0px 0px 20px 0px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* --------- Шапка с меню ---------- */
@@ -249,16 +247,24 @@ body._lock {
   z-index: 5;
   display: flex;
   align-items: center;
-  justify-content: center;
+}
+.phone_svg {
+  position: relative;
+  top: 2px;
+  width: 20px;
+  transform: rotate(250deg);
 }
 #logo {
-  width: 32px;
+  width: 48px;
   margin: 0px 10px 0px 0px;
 }
 .nav__text {
   font-size: calc(26px + 2 * ((100vw - 320px) / (1200 - 320)));
 }
-
+.nav__text a {
+  padding-left: 7px;
+  padding-right: 7px;
+}
 /* Меню бургер */
 .menu__icon {
   display: none;
@@ -275,7 +281,7 @@ body._lock {
 }
 .menu__link:hover {
   text-decoration: underline;
-  color: var(--gold-hover);
+  color: var(--gold);
 }
 
 /* --------- Подменю на ПК и Мобильном ---------- */
@@ -551,7 +557,7 @@ textarea.form__input {
   /* background-color: var(--gold-hover); */
 }
 .my-form-button:hover {
-  background-color: rgb(189, 169, 55);
+  background-color: var(--gray-footer);
   transform: translateY(4%);
 }
 .my-form-button:active {
@@ -629,7 +635,7 @@ textarea.form__input {
 }
 .footer__tel a:hover {
   text-decoration: underline;
-  color: var(--gold-hover);
+  color: var(--gold);
 }
 
 /* Главный экран */
@@ -765,8 +771,8 @@ textarea.form__input {
   padding: 20px 0px 20px 20px;
 }
 .adaptive__title {
-  font-weight: 700;
-  font-size: calc(20px + 4 * ((100vw - 320px) / (1200 - 320)));
+  font-weight: 500;
+  font-size: calc(18px + 4 * ((100vw - 320px) / (1200 - 320)));
 }
 .adaptive__text {
   font-size: calc(16px + 4 * ((100vw - 320px) / (1200 - 320)));
@@ -794,7 +800,7 @@ textarea.form__input {
 }
 
 .hrb {
-  margin: 60px 0px 40px 0px;
+  margin: 0px 0px 20px 0px;
   padding: 40px 0px 40px 0px;
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
@@ -946,9 +952,9 @@ textarea.form__input {
 .spoller__title {
   width: 100%;
   text-align: left;
-  font-size: calc(16px + 4 * ((100vw - 320px) / (1200 - 320)));
+  font-size: calc(15px + 2 * ((100vw - 320px) / (1200 - 320)));
   background-color: var(--gray-footer);
-  color: #000;
+  color: var(--bg2);
   padding: 10px;
   position: relative;
   font-weight: 700;
@@ -964,7 +970,7 @@ textarea.form__input {
   content: "";
   width: 20px;
   height: 2px;
-  background-color: var(--gray);
+  background-color: var(--bg2);
   position: absolute;
   right: 10px;
   top: 20px;
@@ -982,9 +988,8 @@ textarea.form__input {
   line-height: 130%;
 }
 .spoller__item {
-  background-color: ;
   border: 2px solid var(--gray-footer);
-  border-bottom: 1px solid var(--gray);
+  border-bottom: 2px solid var(--gold);
 }
 
 /* Services */
@@ -1031,7 +1036,10 @@ textarea.form__input {
   border-left: 2px solid #c6a57a;
 }
 .margin-vert {
-  margin: 40px 0px 40px 0px;
+  margin: 60px 0px 60px 0px;
+}
+.padding-vert {
+  padding: 60px 0px 60px 0px;
 }
 .gray_w-bg {
   background-color: var(--gray-footer);
@@ -1041,6 +1049,51 @@ textarea.form__input {
   background-color: var(--gray);
 }
 
+/* portfolio */
+.portfolio {
+  background: var(--bg2);
+}
+.portfolio__container {
+  padding: 100px 20px 0px 20px;
+}
+.portfolio__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.portfolio__side_left {
+  width: 46%;
+}
+.portfolio__side_right {
+  width: 46%;
+}
+.portfolio__item .portfolio__photo {
+  overflow: hidden;
+}
+.portfolio__photo img {
+  width: 100%;
+  object-fit: cover;
+  transition: scale 0.8s ease 0s;
+}
+.portfolio__photo img:hover {
+  scale: 1.1;
+  transition: scale 0.8s ease 0s;
+}
+.portfolio__about {
+  margin: 32px 0px 0px 50px;
+}
+.portfolio__item {
+  margin-bottom: 90px;
+}
+.portfolio__link {
+  color: var(--gold);
+  position: relative;
+  top: 15px;
+}
+.portfolio__link:hover {
+  color: var(--gray-footer);
+}
+/*  */
 .fsb {
   display: flex;
   justify-content: space-between;
@@ -1069,6 +1122,9 @@ textarea.form__input {
 }
 .gray {
   color: #747474;
+}
+.gray-w {
+  color: #d1d1d1;
 }
 /*  */
 .tehnologi {
@@ -1120,7 +1176,38 @@ textarea.form__input {
   width: 80%;
 }
 /*  */
-
+.adaptive__padding {
+  padding: 16px 0px 16px 0px;
+}
+/*  */
+.cost {
+  background: var(--bg2);
+}
+.cost-wrapper {
+  background-image: url(../img/bg/cost-bg2.png.webp);
+  background-size: 53%;
+  background-repeat: no-repeat;
+  background-position: right 10% top;
+}
+.cost__content {
+  max-width: 550px;
+}
+.cost__bg {
+  /* background-size: 53%; */
+}
+.cost-section {
+  display: flex;
+  flex-direction: column;
+}
+.cost__item-1 {
+  align-self: flex-end;
+}
+.cost__item-2 {
+  align-self: center;
+}
+.cost__item-3 {
+  /* align-self: flex-end; */
+}
 /*  */
 @media (max-width: 1200px) {
 }
@@ -1130,6 +1217,22 @@ textarea.form__input {
   }
 }
 @media (max-width: 767px) {
+  .cost-wrapper {
+    background-position: right 0% top;
+  }
+  .portfolio__wrap {
+    flex-direction: column;
+  }
+  .portfolio__side_left,
+  .portfolio__side_right {
+    width: 100%;
+  }
+  .portfolio__container {
+    padding: 30px 0px 30px 0px;
+  }
+  .portfolio__item {
+    margin-bottom: 40px;
+  }
   .faq {
     display: block;
   }
@@ -1161,6 +1264,10 @@ textarea.form__input {
   }
 }
 @media (max-width: 450px) {
+  .cost-wrapper {
+    background-size: 90%;
+    background-position: right -20% top 3%;
+  }
   .cite__img img {
     width: 50px;
   }
@@ -1169,7 +1276,7 @@ textarea.form__input {
   }
   .adaptive__item {
     text-align: center;
-    padding: 10px 0px 10px 10px;
+    padding: 10px 10px 10px 10px;
   }
   .adaptive__img img {
     width: 120px;
