@@ -248,22 +248,18 @@ body._lock {
   display: flex;
   align-items: center;
 }
-.phone_svg {
-  position: relative;
-  top: 2px;
-  width: 20px;
-  transform: rotate(250deg);
-}
 #logo {
   width: 48px;
-  margin: 0px 10px 0px 0px;
+  margin: 0px 25px 0px 0px;
 }
 .nav__text {
-  font-size: calc(26px + 2 * ((100vw - 320px) / (1200 - 320)));
+  font-size: calc(22px + 2 * ((100vw - 320px) / (1200 - 320)));
 }
 .nav__text a {
-  padding-left: 7px;
-  padding-right: 7px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  top: 2px;
 }
 /* Меню бургер */
 .menu__icon {
@@ -348,7 +344,7 @@ body._touch .menu__link {
     height: 10%;
     width: 100%;
     transition: all 0.3s ease 0s;
-    background-color: #fff;
+    background-color: var(--gold);
   }
   .menu__icon::before,
   .menu__icon::after {
@@ -551,10 +547,9 @@ textarea.form__input {
   letter-spacing: 2px;
   font-weight: 700;
   cursor: pointer;
-  border-radius: 20px;
+  border-radius: 5px;
   box-shadow: 2px 5px 5px #161b13;
   transition: background-color 0.3s ease 0s;
-  /* background-color: var(--gold-hover); */
 }
 .my-form-button:hover {
   background-color: var(--gray-footer);
@@ -798,9 +793,16 @@ textarea.form__input {
   background-color: #c6a57a;
   border-radius: 50%;
 }
-
+.serv_link {
+  padding-top: 1px;
+}
+.serv__text {
+  font-size: calc(16px + 2 * ((100vw - 320px) / (1200 - 320)));
+  line-height: 160%;
+  color: #171717;
+}
 .hrb {
-  margin: 0px 0px 20px 0px;
+  margin: 0px 0px 80px 0px;
   padding: 40px 0px 40px 0px;
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
@@ -944,7 +946,7 @@ textarea.form__input {
 
 /* Spollers */
 .spoller {
-  margin: 0px 0px 30px 0px;
+  margin: 20px 0px 30px 0px;
 }
 .spoller__item {
   margin: 0px 0px 0px 0px;
@@ -953,7 +955,7 @@ textarea.form__input {
   width: 100%;
   text-align: left;
   font-size: calc(15px + 2 * ((100vw - 320px) / (1200 - 320)));
-  background-color: var(--gray-footer);
+  background-color: #fff;
   color: var(--bg2);
   padding: 10px;
   position: relative;
@@ -970,7 +972,7 @@ textarea.form__input {
   content: "";
   width: 20px;
   height: 2px;
-  background-color: var(--bg2);
+  background-color: var(--gold);
   position: absolute;
   right: 10px;
   top: 20px;
@@ -984,11 +986,12 @@ textarea.form__input {
 }
 .spoller__body {
   padding: 15px;
-  font-size: calc(16px + 4 * ((100vw - 320px) / (1200 - 320)));
+  font-size: calc(16px + 2 * ((100vw - 320px) / (1200 - 320)));
   line-height: 130%;
+  color: var(--gray);
 }
 .spoller__item {
-  border: 2px solid var(--gray-footer);
+  /* border: 2px solid var(--gray-footer); */
   border-bottom: 2px solid var(--gold);
 }
 
@@ -1022,7 +1025,7 @@ textarea.form__input {
 }
 .services__subtitle {
   font-weight: 700;
-  font-size: calc(34px + 4 * ((100vw - 320px) / (1200 - 320)));
+  font-size: calc(28px + 8 * ((100vw - 320px) / (1200 - 320)));
   line-height: 40px;
   margin-bottom: 15px;
 }
@@ -1172,12 +1175,24 @@ textarea.form__input {
   align-items: center;
 }
 .faq__img img {
-  max-width: 460px;
-  width: 80%;
+  max-width: 400px;
+  width: 100%;
 }
+.faq__vid {
+  width: 32%;
+  position: relative;
+}
+.faq__vid video {
+  height: 300px;
+  object-fit: cover;
+}
+
 /*  */
 .adaptive__padding {
   padding: 16px 0px 16px 0px;
+}
+.padding__left {
+  padding-left: 30px;
 }
 /*  */
 .cost {
@@ -1192,9 +1207,6 @@ textarea.form__input {
 .cost__content {
   max-width: 550px;
 }
-.cost__bg {
-  /* background-size: 53%; */
-}
 .cost-section {
   display: flex;
   flex-direction: column;
@@ -1208,6 +1220,12 @@ textarea.form__input {
 .cost__item-3 {
   /* align-self: flex-end; */
 }
+/*  */
+.sub-title {
+  margin-top: 16px;
+}
+/*  */
+
 /*  */
 @media (max-width: 1200px) {
 }
@@ -1232,6 +1250,9 @@ textarea.form__input {
   }
   .portfolio__item {
     margin-bottom: 40px;
+  }
+  .portfolio__about {
+    margin: 32px 0px 0px 0px;
   }
   .faq {
     display: block;
