@@ -1,17 +1,10 @@
 :root {
-  --blue: rgb(0, 87, 184);
-  --blue-transparent: rgba(59, 89, 152, 0.8);
-  --yellow: rgb(255, 215, 0);
-  --color-menu: #3b5998;
-  --yellow-darker: rgb(204, 173, 0);
   --color-footer: rgb(37, 37, 37);
   --gray-footer: #e2e2e2;
   --gold: #c6a57a;
   --bg: #1d1d1d;
   --bg2: #202020;
-  --fb: #3b5998;
   --gray: #747474;
-  --gold-hover: rgb(189, 169, 55);
 }
 
 /*Обнуление*/
@@ -185,11 +178,9 @@ body._lock {
   padding: 30px 30px 30px 30px;
 }
 .yellow__bg {
-  /* background-color: var(--yellow); */
   background-color: var(--gold);
 }
 .blue__title {
-  /* background-color: var(--blue); */
   background-color: var(--bg);
   color: #fff;
 }
@@ -301,8 +292,6 @@ body._touch .menu__link {
   .menu__footer > .menu__list {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between;
-    gap: 30px; */
   }
 }
 @media (max-width: 767px) {
@@ -433,7 +422,6 @@ body._touch .menu__link {
   left: 50%;
   transform: scale(1) translate(-50%, -50%);
   max-width: 90vw;
-  /* background-color: rgba(198, 165, 122, 0.9); */
   background-color: rgba(189, 157, 116, 0.8);
   padding: 0.5rem 1rem;
   box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.3);
@@ -565,7 +553,7 @@ textarea.form__input {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+  gap: 6px;
   background-color: rgb(37, 37, 37);
   color: #fff;
   max-width: 1200px;
@@ -664,7 +652,6 @@ textarea.form__input {
 }
 
 .bg-container {
-  /* max-width: 767px; */
   max-width: 600px;
   margin: 0 auto;
 }
@@ -818,7 +805,6 @@ textarea.form__input {
   font-size: calc(14px + 2 * ((100vw - 320px) / (1200 - 320)));
 }
 .form-bg {
-  /* background-color: rgba(32, 32, 32, 0.9); */
   background-color: var(--gold);
   border-radius: 5px;
   padding: 0px 15px 15px 15px;
@@ -834,7 +820,6 @@ textarea.form__input {
   background-color: var(--gray-footer);
   max-width: 1200px;
   overflow: hidden;
-  /* border-left: 4px solid var(--gold); */
 }
 .cite__text {
   font-size: calc(22px + 6 * ((100vw - 320px) / (1200 - 320)));
@@ -859,18 +844,6 @@ textarea.form__input {
   font-weight: 700;
   color: var(--gold);
 }
-
-/*  */
-/* offset-x | offset-y | color */
-/* offset-x | offset-y | blur-radius | color */
-/*box-shadow: offset-x | offset-y | blur-radius | spread-radius | color */
-/* inset | offset-x | offset-y | color */
-.box {
-  border-radius: 10px 10px 10px 10px;
-  margin-bottom: 20px;
-  padding-top: 10px;
-  padding-right: 5px;
-}
 .shadow {
   box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.5);
   transition: box-shadow 0.3s ease 0s;
@@ -881,18 +854,6 @@ textarea.form__input {
 .text-shadow {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
-.box__title {
-  font-size: calc(24px + 8 * ((100vw - 320px) / (1280 - 320)));
-  font-weight: 500;
-  text-align: center;
-  background-color: var(--gold-hover);
-  border-radius: 10px 10px 0px 0px;
-}
-.box__body {
-  padding: 10px 3px 10px 15px;
-  background-color: #fff;
-  border-radius: 0px 0px 10px 10px;
-}
 .btn {
   width: fit-content;
   padding: 0px 20px 0px 20px;
@@ -900,10 +861,6 @@ textarea.form__input {
   top: 30%;
   left: 1%;
 }
-/* .shadow:hover {
-  box-shadow: 0 0.25rem 1.5625rem rgba(0, 0, 0, 0.5);
-} */
-
 /* Анимация при скроле */
 .anim-right {
   transform: translate(20%, 0px);
@@ -1155,6 +1112,7 @@ textarea.form__input {
 .faq {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 .faq__img {
   display: flex;
@@ -1164,14 +1122,6 @@ textarea.form__input {
 .faq__img img {
   max-width: 400px;
   width: 100%;
-}
-.faq__vid {
-  width: 32%;
-  position: relative;
-}
-.faq__vid video {
-  height: 300px;
-  object-fit: cover;
 }
 
 /*  */
@@ -1204,15 +1154,58 @@ textarea.form__input {
 .cost__item-2 {
   align-self: center;
 }
-/* .cost__item-3 {
-  align-self: flex-end;
-} */
-/*  */
 .sub-title {
   margin-top: 16px;
 }
-/*  */
-@media (max-width: 1200px) {
+/* СМЕНА ЯЗЫКА */
+.menu__arrow {
+  display: none;
+}
+body._touch .menu__arrow {
+  display: block;
+  width: 0;
+  height: 0;
+  margin: 0px 0px 0px 5px;
+  transition: transform 0.3s ease 0s;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 12px solid #fff;
+}
+body._touch .menu__list > li._active .menu__arrow {
+  transform: rotate(-180deg);
+}
+.menu__sub-list {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: var(--bg2);
+  padding: 15px;
+  min-width: 20px;
+}
+.menu__sub-list li {
+  margin: 0px 0px 10px 0px;
+}
+.menu__sub-list li:last-child {
+  margin: 0;
+}
+.menu__sub-link {
+  color: #fff;
+}
+.menu__sub-link:hover {
+  text-decoration: underline;
+  color: var(--gold);
+}
+body._pc .menu__list > li:hover .menu__sub-list {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0px, 0px);
+  pointer-events: all;
+}
+body._touch .menu__list > li._active .menu__sub-list {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0px, 0px);
+  pointer-events: all;
 }
 @media screen and (max-width: 960px) {
   .adaptive__colums {
