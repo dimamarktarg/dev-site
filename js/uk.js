@@ -195,6 +195,7 @@ form.addEventListener("submit", handleSubmit);
 
 // Посимвольная печать текста
 const sentences = [
+  "Хочете залучити нових клієнтів і розвивати свій бізнес в інтернеті?",
   "Створюємо ефективні сайти для Вашого бізнесу",
   "Адаптуємо під телефони, планшети та ПК",
   "Оптимізуємо для пошукових систем",
@@ -205,7 +206,7 @@ let sentenceIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
 const printDelay = 80; // delay in milliseconds per character
-const eraseDelay = 40; // delay in milliseconds per character
+const eraseDelay = 20; // delay in milliseconds per character
 
 function type() {
   const currentSentence = sentences[sentenceIndex];

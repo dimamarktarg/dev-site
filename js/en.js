@@ -193,14 +193,12 @@ async function handleSubmit(event) {
 }
 form.addEventListener("submit", handleSubmit);
 
-// ===================================================================
-
 // Посимвольная печать текста
 const sentences = [
-  "Хотите привлечь новых клиентов и развивать свой бизнес в интернете?",
-  "Делаем эффективные сайты для Вашего бизнеса",
-  "Адаптируем под телефоны, планшеты и ПК",
-  "Оптимизируем для поисковых систем",
+  "Want to attract new customers and grow your business online?",
+  "Making effective sites for your business",
+  "Adapt for phones, tablets and PC",
+  "Optimizing for search engines",
 ];
 
 const text = document.getElementById("text");

@@ -231,6 +231,9 @@ body._lock {
 .nav__text {
   z-index: 5;
   font-size: calc(22px + 2 * ((100vw - 320px) / (1200 - 320)));
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .nav__text a {
   padding-left: 8px;
@@ -815,7 +818,7 @@ textarea.form__input {
 /* Цитаты */
 
 .cite {
-  padding: 10px 0px 10px 10px;
+  padding: 10px 0px 10px 20px;
   margin: 0px auto;
   background-color: var(--gray-footer);
   max-width: 1200px;
@@ -826,7 +829,7 @@ textarea.form__input {
   line-height: 1.5;
   font-weight: 600;
   color: #303030;
-  padding: 10px 10px 10px 10px;
+  padding: 0px 10px 0px 10px;
   transform: translate(-20%, 0px);
   transition: all 2s ease 0s;
 }
@@ -839,17 +842,14 @@ textarea.form__input {
   transition: all 2s ease 0s;
 }
 .cite__img-text {
-  font-size: calc(22px + 6 * ((100vw - 320px) / (1200 - 320)));
-  padding: 0px 15px 0px 10px;
+  font-size: calc(20px + 6 * ((100vw - 320px) / (1200 - 320)));
+  padding: 0px 10px 0px 10px;
   font-weight: 700;
   color: var(--gold);
 }
 .shadow {
   box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.5);
   transition: box-shadow 0.3s ease 0s;
-}
-.shadow-2 {
-  box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.6);
 }
 .text-shadow {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
@@ -983,10 +983,12 @@ textarea.form__input {
   border-left: 2px solid #c6a57a;
 }
 .margin-vert {
-  margin: 60px 0px 60px 0px;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 .padding-vert {
-  padding: 60px 0px 60px 0px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .gray_w-bg {
   background-color: var(--gray-footer);
@@ -1191,6 +1193,7 @@ body._touch .menu__list > li._active .menu__arrow {
 .menu__sub-link {
   color: #fff;
 }
+
 .menu__sub-link:hover {
   text-decoration: underline;
   color: var(--gold);
