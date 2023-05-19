@@ -225,7 +225,7 @@ body._lock {
   align-items: center;
 }
 #logo {
-  width: 48px;
+  width: 32px;
   margin: 0px;
 }
 .nav__text {
@@ -233,7 +233,6 @@ body._lock {
   font-size: calc(22px + 2 * ((100vw - 320px) / (1200 - 320)));
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 .nav__text a {
   padding-left: 8px;
