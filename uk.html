@@ -42,12 +42,10 @@
       <header class="header" id="navbar">
         <div class="header__container">
           <div class="header__logo">
-            <a
-              href="https://dimamarktarg.github.io/dev-site/"
-              class="header__logo"
-              ><span class="menu__link gold">MY-SITE.</span
-              ><img src="img/logo.png" alt="Лого" class="nav__logo" id="logo"
-            /></a>
+            <a href="uk.html" class="header__logo">
+              <div class="logo_1"><tt>MS</tt></div>
+              <div class="logo_2"><tt>UA</tt></div></a
+            >
           </div>
           <div class="nav__text">
             <a href="https://t.me/Smile111" target="_blank" rel="nofollow">
@@ -1108,5 +1106,55 @@
       </div>
       <div class="overlay hidden"></div>
     </div>
+    <div id="cookie-banner">
+      <div class="cookie_container">
+        <p>
+          Цей сайт використовує файли cookie.
+          <a href="https://policies.google.com/privacy?hl=uk" target="_blank"
+            >Детальніше про файли cookie та політику конфіденційності</a
+          >
+        </p>
+        <button id="cookie-accept">Прийняти</button>
+      </div>
+    </div>
+    <script>
+      function setCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+          var date = new Date();
+          date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+          expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+      }
+
+      function getCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(";");
+        for (var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) == " ") c = c.substring(1, c.length);
+          if (c.indexOf(nameEQ) == 0)
+            return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+      }
+
+      function hideBanner() {
+        document.getElementById("cookie-banner").style.display = "none";
+      }
+
+      document
+        .getElementById("cookie-accept")
+        .addEventListener("click", function () {
+          setCookie("cookie_consent", "true", 365);
+          hideBanner();
+        });
+
+      var cookieConsent = getCookie("cookie_consent");
+      if (cookieConsent) {
+        hideBanner();
+      }
+    </script>
   </body>
 </html>

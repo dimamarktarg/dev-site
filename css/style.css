@@ -223,11 +223,23 @@ body._lock {
   z-index: 5;
   display: flex;
   align-items: center;
+
+  flex-direction: column;
+  letter-spacing: 4px;
+  line-height: 1;
+  font-size: 15px;
 }
-#logo {
-  width: 32px;
-  margin: 0px;
+.logo_1 {
+  padding: 0px 12px 0px 14px;
+  color: #ffd700;
+  background-color: #0057b8;
 }
+.logo_2 {
+  background-color: #ffd700;
+  padding: 0px 12px 0px 14px;
+  color: #0057b8;
+}
+
 .nav__text {
   z-index: 5;
   font-size: calc(22px + 2 * ((100vw - 320px) / (1200 - 320)));
@@ -851,7 +863,7 @@ textarea.form__input {
   transition: box-shadow 0.3s ease 0s;
 }
 .text-shadow {
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
 }
 .btn {
   width: fit-content;
@@ -1208,6 +1220,35 @@ body._touch .menu__list > li._active .menu__sub-list {
   visibility: visible;
   transform: translate(0px, 0px);
   pointer-events: all;
+}
+/* Файлы куки */
+#cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 10px;
+  z-index: 5;
+  background-color: var(--gold);
+}
+.cookie_container {
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+#cookie-banner p {
+  font-size: calc(13px + 7 * ((100vw - 320px) / (1200 - 320)));
+  line-height: 1.3;
+}
+#cookie-accept {
+  font-size: calc(14px + 2 * ((100vw - 320px) / (1200 - 320)));
+  padding: 4px 6px 4px 6px;
+  border-radius: 2px;
+  margin-left: 10px;
+  box-shadow: 1px 1px 2px #161b13;
 }
 @media screen and (max-width: 960px) {
   .adaptive__colums {
