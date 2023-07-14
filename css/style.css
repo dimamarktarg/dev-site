@@ -249,12 +249,14 @@ body._lock {
   justify-content: center;
 }
 .nav__text a {
-  padding-left: 8px;
   position: relative;
   top: 2px;
 }
+.nav__text a:first-child {
+  padding-right: 15px;
+}
 /* Меню бургер */
-.menu__icon {
+nlc .menu__icon {
   display: none;
 }
 .menu__list > li {
